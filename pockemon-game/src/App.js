@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Layout from "./components/Layout";
 import Footer from "./components/Footer";
 import urlBG1 from "./Assets/bg1.jpg";
-import urlBG2 from "./Assets/bg2.jpg";
+import urlBG2 from "./Assets/bg3.jpg";
 
 const App = () => {
   return (
@@ -22,7 +22,11 @@ const App = () => {
         title="Layout 3 text"
         descr="Layout 3 description"
         urlBg={urlBG2}
-      />
+      >
+        <p>Some text...</p>
+        <p>Some text...</p>
+        <p>Some text...</p>
+        </Layout>
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 import s from "./style.module.css";
 
-const Layout = ({ title, desc, urlBg, colorBg }) => {
+const Layout = ({ title, desc, urlBg, colorBg, children}) => {
   const sectionStyle = {};
   if (urlBg) {
     sectionStyle.backgroundImage = `url(${urlBg})`;
@@ -18,6 +18,7 @@ const Layout = ({ title, desc, urlBg, colorBg }) => {
           </div>
           <div className={s.desc.full}>
             <p>{desc}</p>
+            {children}
           </div>
         </article>
       </div>
