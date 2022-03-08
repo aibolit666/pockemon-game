@@ -1,6 +1,6 @@
 import s from "./style.module.css";
 
-const Layout = ({ title, desc, urlBg, colorBg }) => {
+const Layout = ({ id, title, urlBg, colorBg, children }) => {
   const sectionStyle = {};
   if (urlBg) {
     sectionStyle.backgroundImage = `url(${urlBg})`;
@@ -9,16 +9,14 @@ const Layout = ({ title, desc, urlBg, colorBg }) => {
     sectionStyle.backgroundColor = colorBg;
   }
   return (
-    <section className={s.root} style={sectionStyle}>
+    <section className={s.root} style={sectionStyle} id={id}>
       <div className={s.wrapper}>
         <article>
           <div className={s.title}>
             <h3>{title}</h3>
             <span className={s.separator}></span>
           </div>
-          <div className={s.desc.full}>
-            <p>{desc}</p>
-          </div>
+          <div className={`${s.desc} ${s.full}`}>{children}</div>
         </article>
       </div>
     </section>
