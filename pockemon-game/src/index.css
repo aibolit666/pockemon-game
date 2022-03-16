@@ -33,3 +33,9 @@ a:active {
 .image-logo {
   max-width: 100%;
 }
+
+button {
+  width: 250px;
+  height: 60px;
+  background-color: #f300b4;
+}
